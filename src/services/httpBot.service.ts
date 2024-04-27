@@ -1,9 +1,9 @@
-import { Bot } from '@/types';
+import { Bot } from "@/types";
 
 /**
- * HttpService
+ * HttpBotService
  */
-export class HttpService {
+export class HttpBotService {
   constructor(
     private bot: Bot,
     private port: number,
@@ -18,11 +18,11 @@ export class HttpService {
     const httpServer = await this.httpServer();
 
     adapterProvider.server.post(
-      '/v1/messages',
+      "/v1/messages",
       handleCtx(async (bot, req, res) => {
-        const { number, message, urlMedia } = req.body;
-        await bot.sendMessage(number, message, { media: urlMedia ?? null });
-        return res.end('sended');
+        const { phone, message, urlMedia } = req.body;
+        await bot.sendMessage(phone, message, { media: urlMedia ?? null });
+        return res.end("sended");
       }),
     );
 

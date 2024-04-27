@@ -1,10 +1,10 @@
-import { Chatbot } from '@/models';
-import { DataSource } from 'typeorm';
+import { Chatbot } from "@/models";
+import { DataSource } from "typeorm";
 
 /**
- * BotService
+ * ChatbotService
  */
-export class BotService {
+export class ChatbotService {
   constructor(private dataSource: DataSource) {}
 
   query() {

@@ -1,4 +1,4 @@
-import { JsonFileDB } from '@builderbot/database-json';
+import { JsonFileDB } from "@builderbot/database-json";
 /**
  * WhatsappDatabase
  */

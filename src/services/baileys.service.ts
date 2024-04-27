@@ -1,5 +1,5 @@
-import { createProvider } from '@builderbot/bot';
-import { BaileysProvider } from '@builderbot/provider-baileys';
+import { createProvider } from "@builderbot/bot";
+import { BaileysProvider } from "@builderbot/provider-baileys";
 
 export class WhatsappProvider {
   private provider: BaileysProvider;

@@ -1,8 +1,8 @@
-import { createBot } from '@builderbot/bot';
-import { WhatsappDatabase } from '@/database';
-import { MainFlow } from '@/flows';
-import { Chatbot } from '@/models';
-import { HttpService, WhatsappProvider } from '@/services';
+import { createBot } from "@builderbot/bot";
+import { WhatsappDatabase } from "@/database";
+import { MainFlow } from "@/flows";
+import { Chatbot } from "@/models";
+import { HttpBotService, WhatsappProvider } from "@/services";
 
 /**
  * registerBot
@@ -24,7 +24,7 @@ export async function registerBot(chatbot: Chatbot) {
     database: database.getDatabase(),
   });
 
-  const httpServer = new HttpService(bot, port);
+  const botServer = new HttpBotService(bot, port);
 
-  await httpServer.register();
+  await botServer.register();
 }

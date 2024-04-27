@@ -1,16 +1,16 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
-@Entity('chatbots')
+@Entity("chatbots")
 export class Chatbot {
-  @PrimaryGeneratedColumn('uuid')
+  @PrimaryGeneratedColumn("uuid")
   id: string;
 
-  @Column('boolean', { comment: 'Disponible', default: true })
+  @Column("boolean", { comment: "Disponible", default: true })
   available: boolean;
 
-  @Column('varchar', { comment: 'Nombre del bot' })
+  @Column("varchar", { comment: "Nombre del bot" })
   name: string;
 
-  @Column('varchar', { comment: 'Puerto', length: 6 })
+  @Column("varchar", { comment: "Puerto", length: 6 })
   port: string;
 }

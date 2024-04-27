@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "ES2022",
+    "target": "ESNext",
+    "module": "ESNext",
     "declaration": false,
+    "esModuleInterop": true,
     "declarationMap": false,
     "moduleResolution": "node",
     "removeComments": true,
