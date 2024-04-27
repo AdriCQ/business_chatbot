@@ -1,0 +1,43 @@
+{
+  "name": "@adricq/chatbot-business",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts\"",
+    "start": "node ./dist/app.js",
+    "lint": "eslint . --no-ignore",
+    "dev": "npm run lint && nodemon ./src/app.ts",
+    "build": "npx rollup -c",
+    "typeorm": "typeorm-ts-node-commonjs"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@builderbot/bot": "1.1.3",
+    "@builderbot/database-json": "^1.1.3",
+    "@builderbot/provider-baileys": "1.1.3",
+    "dotenv": "^16.4.5",
+    "pg": "^8.11.5",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-builderbot": "latest",
+    "eslint-plugin-prettier": "^5.1.3",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5",
+    "rollup": "^4.10.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.3"
+  },
+  "author": "adriancapote95@gmail.com",
+  "license": "ISC"
+}
