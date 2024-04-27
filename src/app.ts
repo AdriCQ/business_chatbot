@@ -1,8 +1,8 @@
-import { setupApiGateway } from "./api";
-import { AppDatabase } from "./database";
-import { registerBot } from "./registerBot";
-import { ChatbotService } from "./services";
-import dotenv from "dotenv";
+import { setupApiGateway } from './api';
+import { AppDatabase } from './database';
+import { registerBot } from './registerBot';
+import { ChatbotService } from './services';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -19,8 +19,8 @@ async function main(db: AppDatabase) {
 }
 
 const db = new AppDatabase({
-  host: process.env.DB_HOST,
-  port: +process.env.DB_PORT,
+  host: process.env.DB_HOST ?? 'localhost',
+  port: +process.env.DB_PORT ?? 5432,
   database: process.env.DB_DATABASE,
   username: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,

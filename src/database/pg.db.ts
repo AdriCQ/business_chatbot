@@ -1,6 +1,6 @@
-import { Chatbot } from "@/models";
-import "reflect-metadata";
-import { DataSource } from "typeorm";
+import { Chatbot } from '@/models';
+import 'reflect-metadata';
+import { DataSource } from 'typeorm';
 
 export class AppDatabase {
   private dataSource: DataSource;
@@ -8,7 +8,7 @@ export class AppDatabase {
   constructor(options: DataSourceParams) {
     this.dataSource = new DataSource({
       ...options,
-      type: "postgres",
+      type: 'postgres',
       entities: [Chatbot],
       synchronize: true,
     });

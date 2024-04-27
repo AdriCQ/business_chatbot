@@ -1,1 +1,1 @@
-export * from "./bot.model";
+export * from './bot.model';

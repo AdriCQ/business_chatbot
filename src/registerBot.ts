@@ -1,8 +1,8 @@
-import { createBot } from "@builderbot/bot";
-import { WhatsappDatabase } from "@/database";
-import { MainFlow } from "@/flows";
-import { Chatbot } from "@/models";
-import { HttpBotService, WhatsappProvider } from "@/services";
+import { createBot } from '@builderbot/bot';
+import { WhatsappDatabase } from '@/database';
+import { MainFlow } from '@/flows';
+import { Chatbot } from '@/models';
+import { HttpBotService, WhatsappProvider } from '@/services';
 
 /**
  * registerBot

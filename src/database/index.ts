@@ -1,2 +1,2 @@
-export * from "./adapter.db";
-export * from "./pg.db";
+export * from './adapter.db';
+export * from './pg.db';

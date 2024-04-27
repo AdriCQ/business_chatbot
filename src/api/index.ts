@@ -1,6 +1,6 @@
-import { AppDatabase } from "@/database";
-import { ChatbotController } from "./chatbot.controller";
-import { HttpServer } from "./http.sever";
+import { AppDatabase } from '@/database';
+import { ChatbotController } from './chatbot.controller';
+import { HttpServer } from './http.sever';
 
 export async function setupApiGateway(db: AppDatabase) {
   const api = new HttpServer();
@@ -9,7 +9,7 @@ export async function setupApiGateway(db: AppDatabase) {
   api.setupRoutes((http) => {
     const Controller = new ChatbotController(db);
 
-    http.post("/v1/messages", Controller.sendMessage);
+    http.post('/v1/messages', Controller.sendMessage);
 
     return http;
   });
